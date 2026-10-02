@@ -1,0 +1,29 @@
+model:
+  vocab_size: 30522
+  dim: 384
+  chunk_size: 16
+  n_read_layers: 2
+  n_heads: 6
+  ffn_mult: 4
+  dropout: 0.0
+  pad_id: 0
+train:
+  steps: 30000
+  batch_size: 128
+  accum: 1
+  lr: 0.0005
+  warmup: 1000
+  weight_decay: 0.01
+  grad_clip: 1.0
+  eval_every: 1000
+  ckpt_every: 1000
+  log_every: 50
+  seed: 0
+  w_cos: 1.0
+  w_sim: 1.0
+  w_inter: 0.2
+  amp: auto
+  out_dir: runs/base
+data:
+  dir: data
+  holdout: 2000

@@ -1,0 +1,8 @@
+torch
+numpy
+pyyaml
+transformers
+huggingface_hub
+pyarrow
+sentence-transformers
+pytest
